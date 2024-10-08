@@ -1,4 +1,4 @@
-package com.looogicaswiss.ss_spring_pet_clinic.model;
+package com.logicaswiss.model;
 
 import java.time.LocalDate;
 

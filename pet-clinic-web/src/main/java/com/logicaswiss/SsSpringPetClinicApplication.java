@@ -1,4 +1,4 @@
-package com.looogicaswiss.ss_spring_pet_clinic;
+package com.logicaswiss;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
