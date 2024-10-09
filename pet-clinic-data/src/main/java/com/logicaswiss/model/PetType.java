@@ -1,4 +1,4 @@
 package com.logicaswiss.model;
 
-public class PetType {
+public class PetType extends BaseEntity {
 }
