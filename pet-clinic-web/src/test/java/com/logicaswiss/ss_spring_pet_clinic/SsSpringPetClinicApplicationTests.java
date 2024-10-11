@@ -9,5 +9,4 @@ class SsSpringPetClinicApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }
