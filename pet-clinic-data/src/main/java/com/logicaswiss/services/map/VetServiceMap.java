@@ -1,11 +1,11 @@
 package com.logicaswiss.services.map;
 
 import com.logicaswiss.model.Vet;
-import com.logicaswiss.services.CrudService;
+import com.logicaswiss.services.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {
         return super.findAll();
