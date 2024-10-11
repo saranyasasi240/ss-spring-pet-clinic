@@ -2,9 +2,10 @@ package com.logicaswiss.services.map;
 
 import com.logicaswiss.model.Owner;
 import com.logicaswiss.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override

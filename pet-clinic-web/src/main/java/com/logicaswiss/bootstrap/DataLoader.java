@@ -4,8 +4,6 @@ import com.logicaswiss.model.Owner;
 import com.logicaswiss.model.Vet;
 import com.logicaswiss.services.OwnerService;
 import com.logicaswiss.services.VetService;
-import com.logicaswiss.services.map.OwnerServiceMap;
-import com.logicaswiss.services.map.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -15,9 +13,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override

@@ -2,9 +2,10 @@ package com.logicaswiss.services.map;
 
 import com.logicaswiss.model.Vet;
 import com.logicaswiss.services.VetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {

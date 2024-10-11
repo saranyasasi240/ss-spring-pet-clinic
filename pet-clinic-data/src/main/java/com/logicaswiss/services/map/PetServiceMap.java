@@ -2,9 +2,11 @@ package com.logicaswiss.services.map;
 
 import com.logicaswiss.model.Pet;
 import com.logicaswiss.services.PetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
     @Override
     public Set<Pet> findAll() {
