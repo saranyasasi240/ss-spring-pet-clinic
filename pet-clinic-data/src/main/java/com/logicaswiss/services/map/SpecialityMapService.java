@@ -1,11 +1,13 @@
 package com.logicaswiss.services.map;
 
 import com.logicaswiss.model.Speciality;
-import com.logicaswiss.services.SpecialitiesService;
+import com.logicaswiss.services.SpecialityService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-public class SpecialityMapService extends AbstractMapService<Speciality, Long> implements SpecialitiesService {
+@Service
+public class SpecialityMapService extends AbstractMapService<Speciality, Long> implements SpecialityService {
     @Override
     public Set<Speciality> findAll() {
         return super.findAll();
