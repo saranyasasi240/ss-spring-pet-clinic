@@ -4,11 +4,13 @@ import com.logicaswiss.model.Speciality;
 import com.logicaswiss.model.Vet;
 import com.logicaswiss.services.SpecialityService;
 import com.logicaswiss.services.VetService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class VetMapService extends AbstractMapService<Vet, Long> implements VetService {
     private final SpecialityService specialityService;
 
