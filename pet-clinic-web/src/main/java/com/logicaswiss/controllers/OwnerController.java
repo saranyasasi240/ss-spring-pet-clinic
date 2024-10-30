@@ -9,15 +9,14 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-
 import javax.validation.Valid;
 import java.util.List;
 
 @RequestMapping({"/owners"})
 @Controller
 public class OwnerController {
-    private final OwnerService ownerService;
     private static final String VIEWS_OWNER_CREATE_OR_UPDATE_FORM = "owners/createOrUpdateOwnerForm";
+    private final OwnerService ownerService;
 
     public OwnerController(OwnerService ownerService) {
         this.ownerService = ownerService;
@@ -42,7 +41,7 @@ public class OwnerController {
         }
 
         // find owners by last name
-        List<Owner> results = ownerService.findAllByLastNameLike("%"+ owner.getLastName() + "%");
+        List<Owner> results = ownerService.findAllByLastNameLike("%" + owner.getLastName() + "%");
 
         if (results.isEmpty()) {
             // no owners found
@@ -77,7 +76,7 @@ public class OwnerController {
         if (result.hasErrors()) {
             return VIEWS_OWNER_CREATE_OR_UPDATE_FORM;
         } else {
-            Owner savedOwner =  ownerService.save(owner);
+            Owner savedOwner = ownerService.save(owner);
             return "redirect:/owners/" + savedOwner.getId();
         }
     }

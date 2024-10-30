@@ -23,18 +23,15 @@ import static org.mockito.Mockito.*;
 @ExtendWith(MockitoExtension.class)
 class OwnerSDJpaServiceTest {
 
+    public final static String LAST_NAME = "Smith";
     @Mock
     OwnerRepository ownerRepository;
     @Mock
     PetRepository petRepository;
     @Mock
     PetTypeRepository petTypeRepository;
-
     @InjectMocks
     OwnerSDJpaService service;
-
-    public final static String LAST_NAME = "Smith";
-
     Owner returnedOwner;
 
     @BeforeEach
